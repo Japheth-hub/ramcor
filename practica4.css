@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-weight: bold !important;
+}
+body{
+    background-color: #333;
+}
+button{
+    cursor: pointer;
+}
+
+.div-nav{
+    padding: 10px;
+    box-shadow: 1px 0px 9px black;
+}
+.nav{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav h1{
+    color: red;
+    text-shadow: 1px 0px 5px rgb(131, 0, 0), -1px 0px 5px rgb(131, 0, 0), 0px 1px 5px rgb(131, 0, 0), 0px -1px 5px rgb(131, 0, 0);
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .3s;
+}
+.nav h1:hover{
+    letter-spacing: 10px;
+    transform: scale(1.2);
+}
+
+.list-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.list-nav li{
+    margin: 0px 20px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: monospace;
+    color: white;
+    text-shadow: 1px 0px 4px white;
+    cursor: pointer;
+    transition: all .3s;
+}
+.list-nav li:hover{
+    transform: scale(1.2);
+}
+#generos{
+    font-size: 1.3rem;
+    border-radius: 7px;
+    margin-right: 0px;
+}
+#generos:hover{
+    box-shadow: 0px 0px 9px white;
+}
+
+#btn-prev, #btn-next{
+    min-width: 25px;
+    border: none;
+    font-size: 2rem;
+    background-color: #333;
+}
+#btn-prev:hover, #btn-next:hover{
+    font-size: 3rem;
+}
+#populares{
+    width: fit-content;
+    margin: 5px auto;
+    color: #eee;
+    text-shadow: 1px 0px 1px black, -1px 0px 1px black, 0px 1px 1px black, 0px -1px 1px black;
+}
+
+#carrusel{
+    width: 90%;
+    min-height: 245px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#innerCarrusel{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+.carrusel-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.carrusel-item img{
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+.detallesCarrusel{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+}
+
+.ramcor{
+    text-shadow: 1px 0px 5px rgb(131, 0, 0), -1px 0px 5px rgb(131, 0, 0), 0px 1px 5px rgb(131, 0, 0), 0px -1px 5px rgb(131, 0, 0);
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-size: 2rem !important;
+    color: white !important;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .3s;
+}
+.ramcor:hover{
+    letter-spacing: 5   px;
+    transform: scale(1.2);
+}
+
+.list-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.list-nav li{
+    margin: 0px 20px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: monospace;
+    color: white;
+    text-shadow: 1px 0px 4px white;
+    cursor: pointer;
+    transition: all .3s;
+}
+.list-nav li:hover{
+    transform: scale(1.2);
+}
+#generos{
+    font-size: 1.3rem;
+    border-radius: 7px;
+    margin-right: 0px;
+}
+#generos:hover{
+    box-shadow: 0px 0px 9px white;
+}
+.fa-search{
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px white;
+    transition: all 0.3s;
+}
+.fa-search:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 3px white;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin:20px auto;
+    padding: 5px;
+    background-color: #ccc;
+    border-radius: 10px;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 500px;
+}
+#paginado{
+    padding: 10px;
+}
+#prev, #next{
+    padding: 5px;
+    border-radius: 8px;
+    margin: 0px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+#nextCarrusel{
+    right: 10px;
+}
+#prevCarrusel{
+    left: 10px;
+}
+
+#prev:hover,
+#next:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 9px black;
+    text-shadow: 0px 0px 5px white;
+}
+#pagina{
+    margin: 0px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    text-align: center;
+    max-width: 1000px;
+}
+
+#membresias{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+}
+
+#peliculas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 5px auto;
+    padding: 10px;
+    gap: 25px;
+    max-width: 100%;
+    
+}
+#pelicula{
+    max-width: 100%;
+    max-height: 93%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+#pelicula img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+#pelicula:hover{
+    transform: scale(1.1);
+    
+}
+
+/* ----------------------------------------modalLogin-------------------------------------- */
+#modalPrincipal{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;   
+    display: flex; 
+    align-items: center; 
+}
+#modalContenedor{
+    position: relative;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0px auto;
+    width: 40%;
+}
+#modalContenedor h1{
+    padding: 10px;
+}
+#modalContenedor form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#modalContenedor input[type="text"], input[type="password"], input[type="email"]{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-radius: 7px;
+}
+#modalContenedor input[type="submit"]{
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .2s;
+}
+#modalContenedor input[type="submit"]:hover{
+    transform: scale(1.1);
+    text-shadow: 0px 0px 7px white;
+    box-shadow: 0px 0px 7px black;
+}
+
+/* ----------------------------Membresias -------------------------------------*/
+
+.membresia{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 363px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 9px black;
+    margin: auto;
+    width: 25%;
+    transition: all .2s;
+}
+.membresia h3{
+    font-size: 1.8rem;
+    margin: 0px auto;
+    color: white;
+    text-shadow: 2px 0px 2px blue, 0px 2px 2px blue, -2px 0px 3px blue, 0px -2px 3px blue;
+}
+.costo-beneficio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0px auto;
+    font-size: 1.3rem;
+    font-family: none;
+}
+.membresia ul{
+    list-style: none;
+    margin: 0px 20px;
+    padding: 5px;
+}
+.basic{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #181818;
+    color: white;
+}
+.duo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #ff2d2d;
+}
+.gold{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #fac020;
+}
+.platinum{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #00ffea;
+}
+.btn-comprar{
+    text-align: center;
+}
+.comprar{
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background-color: #00e1ff;
+    transition: all 0.2s;
+}
+.membresia:hover{
+    transform: scale(1.1);
+}
+.comprar:hover{
+    background-color: #1000ee;
+    color: white;
+}
+
+#footer{
+    width: 100%;
+    padding: 5px 50px;
+}
+footer{
+    text-align: end;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+

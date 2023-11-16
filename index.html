@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practica4.css">
+    <title>RAMCOR</title>
+</head>
+
+<body>
+    <div class="div-nav">
+        <nav class="nav">
+            <a href="index.html">
+                <h1>RAMCOR</h1>
+            </a>
+            <div class="buscarCategoria">
+                <!-- <input list="generos" id="inputGeneros" name="genero" placeholder="Seleccine el genero"> -->
+                <select id="generos">
+                    <option value="todos">Todos</option>
+                </select>
+                <!-- <i id="search" class="fas fa-search"></i> -->
+            </div>
+            <ul class="list-nav">
+                <li id="member">Membresias</li>
+                <li id="login">Login</li>
+                <li id="registro">Registro</li>
+            </ul>
+        </nav>
+    </div>
+    
+    <h2 id="populares">Peliculas mas Populares</h2>
+    <div id="carrusel">
+        <button id="btn-prev">❮</button>
+        <div id="innerCarrusel">
+            
+        </div>
+        <button id="btn-next">❯</button>
+    </div>
+
+
+    <div class="contenedor">
+        <div id="paginado">
+            <button id="prev">Prev</button>
+            <input type="number" id="pagina" min="1" max="500" value="1">
+            <button id="next">Next</button>
+        </div>
+        <div id="peliculas">
+            
+        </div>
+    </div>
+    <div id="footer">
+        <footer>Desarrollado por Angel Ramirez &copy;</footer>
+    </div>
+    
+
+    <script src="users.js"></script>
+    <script src="practica4.js"></script>
+</body>
+
+</html>
